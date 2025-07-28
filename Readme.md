@@ -29,6 +29,23 @@ run_all_collections.bat
 
 ## Docker Deployment
 
+### ⚠️ Important: Network Requirements
+
+**First Build - Internet Required**:
+```bash
+# MUST have internet connection for first build
+docker build -t adobe1b-solution .
+```
+
+**Subsequent Runs - Offline Capable**:
+```bash
+# After first build, can run completely offline
+docker run --network none -it \
+  -v "$(pwd):/app" \
+  -v "$(pwd)/docker_output:/app/output" \
+  adobe1b-solution
+```
+
 ### Building the Docker Image
 ```bash
 docker build -t adobe1b-solution .
@@ -58,7 +75,17 @@ For Windows PowerShell:
 docker run -it -v "${PWD}:/app" -v "${PWD}/docker_output:/app/output" adobe1b-solution
 ```
 
-#### Option 2: Mount Specific PDF Directory
+#### Option 2: Offline Mode (After Initial Build)
+After the first build, you can run completely offline:
+
+```bash
+docker run --network none -it \
+  -v "$(pwd):/app" \
+  -v "$(pwd)/docker_output:/app/output" \
+  adobe1b-solution
+```
+
+#### Option 3: Mount Specific PDF Directory
 If you want to process PDFs from a different location:
 
 ```bash
@@ -74,6 +101,8 @@ docker run -it \
 - **Output Persistence**: Results saved to mounted output directory
 - **Multi-Collection Support**: Process any or all collections
 - **Pre-downloaded Models**: All AI models are downloaded during build time for faster startup
+- **Offline Capability**: Can run completely offline after initial build
+- **Air-Gap Ready**: Perfect for secure/isolated environments
 - **Optimized Performance**: No runtime model downloads, ready to process immediately
 
 ### Docker Configuration
