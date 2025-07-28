@@ -1,0 +1,19 @@
+# Core dependencies
+PyMuPDF==1.23.26
+sentence-transformers==2.7.0
+numpy==1.26.4
+transformers==4.44.2
+
+# PaddleOCR for layout detection (optional but recommended)
+# paddlepaddle==2.6.1
+# paddleocr==2.7.3
+# opencv-python-headless==4.10.0.84
+
+# Additional dependencies
+Pillow==10.4.0
+scikit-learn==1.5.1
+huggingface-hub==0.24.5
+
+# System dependencies
+requests==2.32.3
+urllib3==2.2.2

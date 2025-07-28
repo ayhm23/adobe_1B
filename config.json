@@ -1,0 +1,28 @@
+{
+  "collections": {
+    "Collection 1": {
+      "input_folder": "C:\\Users\\archi\\OneDrive\\Desktop\\New folder (2)\\Adobe1B\\Challenge_1b\\Collection 1\\PDFs",
+      "persona": "Travel Planner",
+      "job_to_be_done": "Plan a trip of 4 days for a group of 10 college friends",
+      "job_query": "travel destinations attractions activities accommodation restaurants"
+    },
+    "Collection 2": {
+      "input_folder": "C:\\Users\\archi\\OneDrive\\Desktop\\New folder (2)\\Adobe1B\\Challenge_1b\\Collection 2\\PDFs",
+      "persona": "HR professional",
+      "job_to_be_done": "Create and manage fillable forms for onboarding and compliance.",
+      "job_query": "create fillable PDF forms for new employee onboarding"
+    },
+    "Collection 3": {
+      "input_folder": "C:\\Users\\archi\\OneDrive\\Desktop\\New folder (2)\\Adobe1B\\Challenge_1b\\Collection 3\\PDFs",
+      "persona": "Food Contractor",
+      "job_to_be_done": "Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items",
+      "job_query": "vegetarian buffet dinner menu corporate gathering gluten-free items"
+    }
+  },
+  "output_settings": {
+    "output_folder": "output",
+    "save_individual_results": false,
+    "top_k_matches": 5,
+    "top_k_output": 5
+  }
+}

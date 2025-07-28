@@ -1,0 +1,100 @@
+# Git and version control
+.git
+.gitignore
+.gitattributes
+
+# Documentation
+README.md
+README_Round1B.md
+*.md
+docs/
+
+# Development files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python virtual environments (don't include in Docker)
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Python cache (will be regenerated in container)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Test and output directories
+test_output/
+docker_output/
+output/
+Adobe1A/
+
+# Local development files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Log files
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Node modules (if any)
+node_modules/
+npm-debug.log*
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Docker related (don't copy Docker files into Docker)
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Helper scripts that are not needed in container
+run_docker.sh
+run_docker.bat
+run_all_collections.bat
+
+# IDE specific files
+*.code-workspace
+
+# Backup files
+*.bak
+*.backup
+
+# Large data files that should be mounted instead
+*.pdf
+Challenge_1b/
