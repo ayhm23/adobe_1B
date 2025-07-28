@@ -32,6 +32,9 @@ RUN pip install --no-cache-dir torch==2.3.1+cpu torchvision==0.18.1+cpu torchaud
 # Install other Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
+
+ARG CACHE_BUST=1
+
 # Copy application code
 COPY src/ src/
 COPY config.json .
@@ -61,7 +64,7 @@ RUN echo "Cache bust: $CACHE_BUST" && \
     python3 download_models.py
 
 # Set offline mode after download
-ENV HF_HUB_OFFLINE=1
+# ENV HF_HUB_OFFLINE=1
 
 # Expose port (if needed for web interface later)
 EXPOSE 8080
